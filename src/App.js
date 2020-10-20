@@ -1,15 +1,11 @@
 import React, {Component} from 'react';
 import './App.css';
-import {Button} from './components/Button';
-import {Input} from './components/Input';
-import {ClearButton} from './components/ClearButton';
 
 const Memoria = props => (
   <table>
       <thead>
       <tr>
           <th>
-              TESTE
           </th>
       </tr>
       </thead>
@@ -27,7 +23,26 @@ const Memoria = props => (
   </table>
 )
 
+const isOperator = val => {
+  return !isNaN(val) || val === "." || val === "=";
+}
 
+const Button = props => (
+  <div className={`button-wrapper ${
+      isOperator(props.children) ? null: "operator"
+  }`}
+    onClick={() => props.handleClick(props.children)}
+  >
+      {props.children}
+  </div>
+)
+
+const Input = props => <div className="input">{props.input}</div>;
+const ClearButton = props => (
+  <div className="clear-btn" onClick={props.handleClear}>
+    {props.children}
+  </div>
+);
 class App extends Component {
   constructor(props){
     super(props);

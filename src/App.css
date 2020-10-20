@@ -1,24 +1,77 @@
-.app {
+.app 
+{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.calc-wrapper 
+{
+  width: 300px;
+  height: 300px;
+}
+
+.row 
+{
+  display: flex;
+  width: 100%;
+}
+
+.Memoria 
+{
+  width: 30%;
+  height: 500px;
+}
+
+th,tr{    
+  height: 20px;
+  width: 100px;
+}
+
+.button-wrapper {
+  height: 3em;
+  width: 70%;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 100%;
+  font-weight: lighter;
+  font-size: 1.4em;
+  background-color: #474955;
+  color: rgb(255, 255, 255);
+  flex: 1;
+  outline: 1px solid #01081a3f;
 }
 
-.calc-wrapper {
-  width: 400px;
-  height: 600px;
+.operator
+{
+  background-color: #162a8f;
+  color: rgb(255, 255, 255);
 }
 
-.row {
+.input 
+{
+  height: 4em;
   display: flex;
-  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.4em;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 0.5em;
+  outline: 1px solid #000000;
 }
 
-.Memoria {
-  width: 400px;
-  height: 600px;
-  justify-content: left;
+.clear-btn 
+{
+  height: 4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: lighter;
+  font-size: 1.4em;
+  background-color: #c5c3cd;
+  color: #000000;
+  flex: 1;
+  outline: 1px solid #888888;
 }
 
